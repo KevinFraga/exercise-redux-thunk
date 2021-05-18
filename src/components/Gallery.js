@@ -18,14 +18,14 @@ class Gallery extends Component {
 
 Gallery.propTypes = {
   imgPath: PropTypes.string,
-  isLoading: PropTypes.bool.isRequired,
-  useDefaultImg: PropTypes.bool.isRequired,
-};
+  isLoading: PropTypes.bool,
+  useDefaultImg: PropTypes.bool,
+}.isRequired;
 
 const mapStateToProps = (state) => ({
-  imgPath: state.gallery.imgURL.file,
-  isLoading: state.gallery.isLoading,
-  useDefaultImg: state.gallery.defaultImg,
+  imgPath: state.galleryReducer.imgURL,
+  isLoading: state.galleryReducer.isLoading,
+  useDefaultImg: state.galleryReducer.defaultImg,
 });
 
 export default connect(mapStateToProps)(Gallery);

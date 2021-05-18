@@ -6,7 +6,7 @@ const INITIAL_STATE = {
   defaultImg: true,
 };
 
-function gallery(state = INITIAL_STATE, action) {
+function galleryReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
   case REQUEST_API:
     return {
@@ -26,4 +26,4 @@ function gallery(state = INITIAL_STATE, action) {
   }
 }
 
-export default gallery;
+export default galleryReducer;
